@@ -1,10 +1,10 @@
 import { FriendListItem } from './FriendListItem';
-
-export const FriendList = function (friends) {
+import { List } from './FriendList.styled';
+export const FriendList = function ({ props }) {
   //   console.log(friends);
   return (
-    <ul class="friend-list">
-      <FriendListItem friends={friends} />
-    </ul>
+    <List className="friend-list">
+      <FriendListItem data={props} />
+    </List>
   );
 };
