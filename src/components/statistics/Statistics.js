@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { UlSection, Title } from './Statistics.styled';
+import { UlSection } from './Statistics.styled';
 
 export const Statistics = function ({ title, stats }) {
   const isTitle = title ? <h2 className="title-statistics">{title}</h2> : '';
