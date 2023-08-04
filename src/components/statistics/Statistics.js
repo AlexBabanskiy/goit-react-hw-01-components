@@ -2,10 +2,9 @@ import PropTypes from 'prop-types';
 import { UlSection } from './Statistics.styled';
 
 export const Statistics = function ({ title, stats }) {
-  const isTitle = title ? <h2 className="title-statistics">{title}</h2> : '';
   return (
     <UlSection>
-      {isTitle}
+      {title && <h2 className="title-statistics">{title}</h2>}
 
       <ul className="statistic-list">
         {stats.map(stat => (
@@ -20,7 +19,7 @@ export const Statistics = function ({ title, stats }) {
 };
 
 Statistics.propTypes = {
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
   label: PropTypes.string.isRequired,
   percentage: PropTypes.string.isRequired,
   id: PropTypes.number.isRequired,
